@@ -8,9 +8,9 @@ p {
   width: 100px;
   text-align: center;
 }
-p:hover{
+/*p:hover{
   width: 200px;
   height: 200px;
   border-radius: 100px;
   transition: height width 2s;
-}
+}*/
