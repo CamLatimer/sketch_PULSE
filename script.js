@@ -1,33 +1,26 @@
-var circle = $('#circle-p'); // select cirlce
-var iD;
-var status = 0;
-
+var circle = $('#circle-p');
+var span = $('span');
 circle.hover(function(){
-  pulse();
+  var status = 0;
+  var iD;
 
+  pulse();
 }, function() {
   clearTimeout(iD);
-  circle.css({
-    width: 100,
-    height: 100,
-  })
+  circle.css({top: 200, width: 100, height: 100, backgroundColor: 'rgba(220,15,0,0.2)', transition: '.2s'})
+  span.css({top: '25%'})
 })
 
 function grow() {
-  circle.css({
-    width: 300,
-    height: 300,
-    transition: '.2s'
-  })
+  circle.css({top: 120, width: 300, height: 300, backgroundColor: 'grey', transition: '.2s'})
+  span.css({top: '40%'})
   status = 1;
+
 }
 
 function shrink() {
-  circle.css({
-    width: 100,
-    height: 100,
-    transition: '.2s'
-  })
+  circle.css({top: 200, width: 100, height: 100, backgroundColor: 'rgba(220,15,0,0.2)', transition: '.2s'})
+  span.css({top: '25%'})
   status = 0;
 }
 
@@ -39,5 +32,5 @@ function pulse() {
     }
   iD = setTimeout(function() {
     pulse();
-  }, 200)
+  }, 230)
 }
