@@ -33,7 +33,6 @@ function shrink() {
 }
 
 function pulse() {
-
   iD = setInterval(function() {
     if (status == 0) {
       grow()
